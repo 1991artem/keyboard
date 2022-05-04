@@ -1,0 +1,92 @@
+@import url(../../fonts/georgian/stylesheet.css);
+@import url(../../fonts/arial/stylesheet.css);
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+.body {
+width: 100%;
+height: 1500px;
+}
+.wrapper{
+    width: 95%;
+    height:  100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+}
+.header{
+    width: 100%;
+    height:  15%;
+    display: flex;
+    background-color: rgb(106, 255, 0);
+}
+.page{
+    width: 100%;
+    height:  70%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(187, 255, 0);
+}
+.footer{
+    width: 100%;
+    height:  15%;
+    display: flex;
+    background-color: rgb(106, 255, 0);
+}
+.keyboard_area{
+    width: 100%;
+    height:  30%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    pointer-events: none;
+    background-color: rgb(235, 237, 229);
+}
+.text_window{
+    width: 100%;
+    height:  70%;
+    display: flex;
+    background-color: rgb(243, 245, 239);
+}
+.text_area{
+    font-size: 238%;
+}
+.word{
+    width: 6.25%;
+    height: 13%;
+    margin: 0.2%;
+    font-size: 20px;
+    font-family: Georgia;
+    display: flex;
+    border: solid 1px;
+    pointer-events: all;
+    background-color: beige;
+}
+.symbol{
+    margin: auto;
+    pointer-events: none;
+}
+.touch{
+    background-color: rgb(245, 220, 239);
+}
+.Space{
+    width: 39%;
+    font-size: 20px;
+}
+.Enter,
+.Tab,
+.Backspace,
+.CapsLock,
+.ShiftLeft,
+.ShiftRight
+{
+    width: 12.5%;
+    font-size: 20px;
+}
