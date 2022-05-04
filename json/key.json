@@ -1,0 +1,257 @@
+[
+    {
+        "display": "§",
+        "name": "Backquote"
+        },
+    {
+        "name": "Digit1",
+        "keyCodeEN": "49"
+        },
+    {
+        "name": "Digit2",
+        "keyCodeEN": "50"
+        },
+    {
+        "name": "Digit3",
+        "keyCodeEN": "51"
+        },
+    {
+        "name": "Digit4",
+        "keyCodeEN": "52"
+        },
+    {
+        "name": "Digit5",
+        "keyCodeEN": "53"
+        },
+    {
+        "name": "Digit6",
+        "keyCodeEN": "54"
+        },
+    {
+        "name": "Digit7",
+        "keyCodeEN": "55"
+        },
+    {
+        "name": "Digit8",
+        "keyCodeEN": "56"
+        },
+    {
+        "name": "Digit9",
+        "keyCodeEN": "57"
+        },
+    {
+        "name": "Digit0",
+        "keyCodeEN": "48"
+        },
+    {
+        "name": "Minus",
+        "keyCodeEN": "0x2014"
+        },
+    {
+        "display": "=",
+        "name": "Equal"
+        },
+    {
+        "display": "Backspace",
+        "name": "Backspace",
+        "keyCodeEN": "0x08"
+        },
+    {
+        "display": "Tab",
+        "name": "Tab"
+        },
+    {
+        "name": "KeyQ",
+        "keyCodeEN": "81"
+        },
+    {
+        "name": "KeyW",
+        "keyCodeEN": "87"
+        },
+    {
+        "name": "KeyE",
+        "keyCodeEN": "69"
+        },
+    {
+        "name": "KeyR",
+        "keyCodeEN": "82"
+        },
+    {
+        "name": "KeyT",
+        "keyCodeEN": "84"
+        },
+    {
+        "name": "KeyY",
+        "keyCodeEN": "89"
+        },
+    {
+        "name": "KeyU",
+        "keyCodeEN": "85"
+        },
+    {
+        "name": "KeyI",
+        "keyCodeEN": "73"
+        },
+    {
+        "name": "KeyO",
+        "keyCodeEN": "79"
+        },
+    {
+        "name": "KeyP",
+        "keyCodeEN": "80"
+        },
+    {
+        "display": "[",
+        "name": "BracketLeft"
+        },
+    {
+        "display": "]",
+        "name": "BracketRight"
+        },
+    {
+        "display": "\\",
+        "name": "Backslash"
+        },
+    {
+        "display": "CapsLock",
+        "name": "CapsLock"
+        },
+    {
+        "name": "KeyA",
+        "keyCodeEN": "65"
+        },
+    {
+        "name": "KeyS",
+        "keyCodeEN": "83"
+        },
+    {
+        "name": "KeyD",
+        "keyCodeEN": "68"
+        },
+    {
+        "name": "KeyF",
+        "keyCodeEN": "70"
+        },
+    {
+        "name": "KeyG",
+        "keyCodeEN": "71"
+        },
+    {
+        "name": "KeyH",
+        "keyCodeEN": "72"
+        },
+    {
+        "name": "KeyJ",
+        "keyCodeEN": "74"
+        },
+    {
+        "name": "KeyK",
+        "keyCodeEN": "75"
+        },
+    {
+        "name": "KeyL",
+        "keyCodeEN": "76"
+        },
+    {
+        "display": ";",
+        "name": "Semicolon"
+        },
+    {
+        "display": "'",
+        "name": "Quote"
+        },
+    {
+        "display": "Enter",
+        "name": "Enter",
+        "keyCodeEN": "13"
+        },
+    {
+        "display": "Shift",
+        "name": "ShiftLeft"
+        },
+    {
+        "name": "KeyZ",
+        "keyCodeEN": "90"
+        },
+    {
+        "name": "KeyX",
+        "keyCodeEN": "88"
+        },
+    {
+        "name": "KeyC",
+        "keyCodeEN": "67"
+        },
+    {
+        "name": "KeyV",
+        "keyCodeEN": "86"
+        },
+    {
+        "name": "KeyB",
+        "keyCodeEN": "66"
+        },
+    {
+        "name": "KeyN",
+        "keyCodeEN": "78"
+        },
+    {
+        "name": "KeyM",
+        "keyCodeEN": "77"
+        },
+    {
+        "display": ",",
+        "name": "Comma"
+        },
+    {
+        "display": ".",
+        "name": "Period"
+        },
+    {
+        "display": "/",
+        "name": "Slash"
+        },
+    {
+        "display": "&#8593;",
+        "name": "ArrowUp"
+        },
+    {
+        "display": "Shift",
+        "name": "ShiftRight"
+        },
+    {
+        "display": "Ctrl",
+        "name": "ControlLeft"
+        },
+    {
+        "display": "Cmd",
+        "name": "MetaLeft"
+        },
+    {
+        "display": "Alt",
+        "name": "AltLeft"
+        },
+   {
+        "display": "Space",
+        "name": "Space",
+        "keyCodeEN": "32"
+        },
+   {
+        "display": "Alt",
+        "name": "AltRight"
+        },
+   {
+        "display": "Cmd",
+        "name": "MetaRight"
+        },
+   {
+        "display": "&#8592;",
+        "name": "ArrowLeft"
+        },
+   {
+        "display": "&#8595;",
+        "name": "ArrowDown"
+        },
+   {
+        "display": "&#8594;",
+        "name": "ArrowRight"
+        }
+  ]

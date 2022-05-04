@@ -1,0 +1,125 @@
+@import url(../../fonts/georgian/stylesheet.css);
+@import url(../../fonts/arial/stylesheet.css);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+.body {
+  width: 100%;
+  height: 1500px;
+}
+
+.wrapper {
+  width: 95%;
+  height: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aqua;
+}
+
+.header {
+  width: 100%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #6aff00;
+}
+
+.page {
+  width: 100%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #bbff00;
+}
+
+.footer {
+  width: 100%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #6aff00;
+}
+
+.keyboard_area {
+  width: 100%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  pointer-events: none;
+  background-color: #ebede5;
+}
+
+.text_window {
+  width: 100%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f3f5ef;
+}
+
+.text_area {
+  font-size: 238%;
+}
+
+.word {
+  width: 6.25%;
+  height: 13%;
+  margin: 0.2%;
+  font-size: 20px;
+  font-family: Georgia;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px;
+  pointer-events: all;
+  background-color: beige;
+}
+
+.symbol {
+  margin: auto;
+  pointer-events: none;
+}
+
+.touch {
+  background-color: #f5dcef;
+}
+
+.Space {
+  width: 39%;
+  font-size: 20px;
+}
+
+.Enter,
+.Tab,
+.Backspace,
+.CapsLock,
+.ShiftLeft,
+.ShiftRight {
+  width: 12.5%;
+  font-size: 20px;
+}
+/*# sourceMappingURL=index.css.map */
