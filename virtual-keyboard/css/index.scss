@@ -1,5 +1,5 @@
-@import url(../../fonts/georgian/stylesheet.css);
-@import url(../../fonts/arial/stylesheet.css);
+@import url(/fonts/georgian/stylesheet.css);
+@import url(/fonts/arial/stylesheet.css);
 
 *{
     box-sizing: border-box;
@@ -9,7 +9,7 @@
 
 .body {
 width: 100%;
-height: 1500px;
+height: 1000px;
 }
 .wrapper{
     width: 95%;
@@ -25,68 +25,98 @@ height: 1500px;
     width: 100%;
     height:  15%;
     display: flex;
-    background-color: rgb(106, 255, 0);
+    background-color: rgb(231, 235, 228);
 }
 .page{
     width: 100%;
     height:  70%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(187, 255, 0);
+    background-color: rgb(231, 235, 228);
 }
 .footer{
     width: 100%;
     height:  15%;
     display: flex;
-    background-color: rgb(106, 255, 0);
+    background-color: rgb(231, 235, 228);
 }
 .keyboard_area{
     width: 100%;
-    height:  30%;
+    height:  50%;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     pointer-events: none;
-    background-color: rgb(235, 237, 229);
+    justify-content: center;
+    background-color: rgb(167, 168, 164);
 }
 .text_window{
     width: 100%;
-    height:  70%;
+    height:  50%;
     display: flex;
     background-color: rgb(243, 245, 239);
 }
 .text_area{
-    font-size: 238%;
+    width: 100%;
+    font-size: 250%;
 }
 .word{
-    width: 6.25%;
+    width: 6.22%;
     height: 13%;
     margin: 0.2%;
     font-size: 20px;
     font-family: Georgia;
     display: flex;
     border: solid 1px;
+    border-radius: 10px;
     pointer-events: all;
-    background-color: beige;
+    background-color: rgb(198, 198, 194);
+    cursor: pointer;
 }
 .symbol{
     margin: auto;
     pointer-events: none;
+    color: rgb(243, 245, 247);
 }
 .touch{
-    background-color: rgb(245, 220, 239);
+    background-color: rgb(249, 245, 248);
+}
+.long_touch{
+    border-color: rgb(240, 83, 83);
 }
 .Space{
-    width: 39%;
+    width: 30%;
     font-size: 20px;
+    background-color: rgb(151, 151, 147);
 }
 .Enter,
+.MetaRight,
+.AltRight,
+.MetaLeft,
+.AltLeft,
+.ArrowUp,
+.ArrowLeft,
+.ArrowDown,
+.ArrowRight
+{
+    background-color: rgb(151, 151, 147);
+    font-size: 18px;
+}
 .Tab,
+.ControlLeft,
 .Backspace,
 .CapsLock,
 .ShiftLeft,
 .ShiftRight
 {
-    width: 12.5%;
-    font-size: 20px;
+    width: 11%;
+    font-size: 18px;
+    background-color: rgb(151, 151, 147);
+}
+.ShiftLeft,
+.ShiftRight
+{
+    width: 9%;
+    font-size: 18px;
+    background-color: rgb(151, 151, 147);
 }
