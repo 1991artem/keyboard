@@ -12,7 +12,7 @@ width: 100%;
 height: 1000px;
 }
 .wrapper{
-    width: 95%;
+    min-width: 700px;
     height:  100%;
     max-width: 1200px;
     display: flex;
@@ -79,44 +79,46 @@ height: 1000px;
     color: rgb(243, 245, 247);
 }
 .touch{
-    background-color: rgb(249, 245, 248);
+    background-color: rgb(214, 208, 213);
+    border-color: rgb(240, 83, 83);
 }
 .long_touch{
     border-color: rgb(240, 83, 83);
 }
-.Space{
-    width: 30%;
+div[name="Space"]{
+    width: 31%;
     font-size: 20px;
-    background-color: rgb(151, 151, 147);
+    background-color: rgb(172, 172, 155);;
 }
-.Enter,
-.MetaRight,
-.AltRight,
-.MetaLeft,
-.AltLeft,
-.ArrowUp,
-.ArrowLeft,
-.ArrowDown,
-.ArrowRight
+div[name="lng"]{
+    background-color: rgb(233, 233, 207);;
+}
+div[name="ArrowUp"],
+div[name="ArrowLeft"],
+div[name="ArrowDown"],
+div[name="ArrowRight"]
 {
-    background-color: rgb(151, 151, 147);
+    background-color: rgb(172, 172, 155);
     font-size: 18px;
 }
-.Tab,
-.ControlLeft,
-.Backspace,
-.CapsLock,
-.ShiftLeft,
-.ShiftRight
-{
-    width: 11%;
-    font-size: 18px;
-    background-color: rgb(151, 151, 147);
-}
-.ShiftLeft,
-.ShiftRight
+div[name="Enter"],
+div[name="CapsLock"],
+div[name="ShiftLeft"],
+div[name="ShiftRight"],
+div[name="Tab"]
 {
     width: 9%;
     font-size: 18px;
-    background-color: rgb(151, 151, 147);
+    background-color: rgb(172, 172, 155);
+}
+div[name="MetaRight"],
+div[name="MetaLeft"],
+div[name="AltRight"],
+div[name="AltLeft"],
+div[name="Backspace"],
+div[name="ControlLeft"]
+{
+    width: 8%;
+    font-size: 12px;
+    background-color: rgb(172, 172, 155);
 }
