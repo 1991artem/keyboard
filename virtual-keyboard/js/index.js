@@ -55,8 +55,9 @@ window.onload = () =>{
             if (flag.en_lang == undefined) {
                 flag.en_lang = true;
             }
-            flag.lower_case = true;
+            flag.up_case = false;
             flag.ctrl = false;
+            flag.shift = false;
 
     
     const KEYBOARD = document.querySelector ('.keyboard_area');
@@ -73,18 +74,18 @@ window.onload = () =>{
         let keyArray = [];
         switch (flag.en_lang){
             case false:{
-                if (flag.lower_case){
-                    keyArray = LG_LOW_WORD_ARRAY;
-                } else{
+                if (flag.up_case || flag.shift){
                     keyArray = LG_UP_WORD_ARRAY;
+                } else{
+                    keyArray = LG_LOW_WORD_ARRAY;
                 }
                 break;
             }
             default :{
-                if (flag.lower_case){
-                    keyArray = EN_LOW_WORD_ARRAY;
-                } else{
+                if (flag.up_case || flag.shift){
                     keyArray = EN_UP_WORD_ARRAY;
+                } else{
+                    keyArray = EN_LOW_WORD_ARRAY;
                 }
             }
         }
@@ -103,12 +104,16 @@ window.onload = () =>{
                         symbol.innerHTML = keyArray[i];
                     }
     };
-    if (!flag.lower_case){
+    if (flag.up_case){
         document.querySelector ('[name=CapsLock]').classList.add('long_touch');
+    }
+    if (flag.shift){
         document.querySelector ('[name=ShiftLeft]').classList.add('long_touch');
         document.querySelector ('[name=ShiftRight]').classList.add('long_touch');
     }
 }
+
+    const SHIFT = document.querySelector ('[name=ShiftLeft]');
 
     function physical_keyboard (){
         
@@ -146,13 +151,13 @@ window.onload = () =>{
                                 flag.en_lang = false;
                                 KEYBOARD.innerHTML = "";
                                 keyboard_onload ();
-                                flag.lower_case = true;
+                                flag.up_case = true;
                                 flag.ctrl = false;
                             } else {
                                 flag.en_lang = true;
                                 KEYBOARD.innerHTML = "";
                                 keyboard_onload ();
-                                flag.lower_case = true;
+                                flag.up_case = true;
                                 flag.ctrl = false;
                             }
                             localStorage.setItem("flag.en_lang",flag.en_lang);
@@ -186,16 +191,23 @@ window.onload = () =>{
                         break;
                     }
                     case  'ShiftLeft':
-                    case  'ShiftRight':
-                    case  'CapsLock': {                                       
-                        if (flag.lower_case){
-                            flag.lower_case = false;
+                    case  'ShiftRight':{
+                        e.target.classList.toggle('long_touch');
+                        if (flag.shift){
+                            flag.shift = false;
                         } else{
-                            flag.lower_case = true;
+                            flag.shift = true;
                         }
-                        KEYBOARD.innerHTML = "";
-                        keyboard_onload ();
-                        flag.ctrl = false;
+                        change_reg ();
+                        break;
+                    }
+                    case  'CapsLock': {                                       
+                        if (flag.up_case){
+                            flag.up_case = false;
+                        } else{
+                            flag.up_case = true;
+                        }
+                        change_reg ();
                         break;
                     }
                     case  'ControlLeft': {
@@ -226,7 +238,7 @@ window.onload = () =>{
                         }
                         KEYBOARD.innerHTML = "";
                         keyboard_onload ();
-                        lower_case = true;
+                        up_case = true;
                         flag.ctrl = false;
                         localStorage.setItem("flag.en_lang",flag.en_lang);
                         break;
@@ -236,8 +248,12 @@ window.onload = () =>{
                         break;
                     }
                     default : {
-                        if (e.shiftKey || flag.lower_case == false){
+                        if (e.shiftKey || flag.up_case || flag.shift){
                             TEXTAREA.value += e.target.attributes.value.nodeValue.toUpperCase();
+                            if (flag.shift){
+                                flag.shift = false;
+                                change_reg ();
+                            }
                         } else{
                             TEXTAREA.value += e.target.attributes.value.nodeValue;
                         }
@@ -250,6 +266,11 @@ window.onload = () =>{
           KEYBOARD.addEventListener('mouseup', (e) => {
             e.target.classList.remove('touch');
           });
+    }
+    function change_reg (){
+        KEYBOARD.innerHTML = "";
+        keyboard_onload ();
+        flag.ctrl = false;
     }
 
     

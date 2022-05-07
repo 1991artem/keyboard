@@ -126,7 +126,7 @@
 
 div[name="Space"] {
   width: 31%;
-  font-size: 20px;
+  font-size: 1.5vw;
   background-color: #acac9b;
 }
 
@@ -139,7 +139,7 @@ div[name="ArrowLeft"],
 div[name="ArrowDown"],
 div[name="ArrowRight"] {
   background-color: #acac9b;
-  font-size: 18px;
+  font-size: 1.5vw;
 }
 
 div[name="Enter"],
@@ -148,7 +148,7 @@ div[name="ShiftLeft"],
 div[name="ShiftRight"],
 div[name="Tab"] {
   width: 9%;
-  font-size: 18px;
+  font-size: 2vw;
   background-color: #acac9b;
 }
 
@@ -159,7 +159,7 @@ div[name="AltLeft"],
 div[name="Backspace"],
 div[name="ControlLeft"] {
   width: 8%;
-  font-size: 12px;
+  font-size: 0.9vh;
   background-color: #acac9b;
 }
 
