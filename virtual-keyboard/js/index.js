@@ -1,45 +1,51 @@
 
-    class Key {
-        constructor (value, lowKeyEn, upKeyEn, lowKeyLg, upKeyLg){
-            this.value = value;
-            this.lowKeyEn = lowKeyEn;
-            this.upKeyEn = upKeyEn;
-            this.lowKeyLg = lowKeyLg;
-            this.upKeyLg = upKeyLg;
-        }
-    }
-
+window.onload = () =>{
 
     function windowForm (){
         let body = document.getElementsByTagName ('body')[0];
         body.classList.add('body');
-    
+
         let wrapper = document.createElement('wrapper');
-        let header = document.createElement('header');
-        let page = document.createElement('page');
-        let footer = document.createElement('footer');
-        let text_window = document.createElement('form');
-        let text_area = document.createElement('textarea');
-        let keyboard_area = document.createElement('div');
-    
         wrapper.classList.add('wrapper');
-        header.classList.add('header');
-        footer.classList.add('footer');
-        page.classList.add('page');
-        text_window.classList.add('text_window');
-        text_area.classList.add('text_area');
-        keyboard_area.classList.add('keyboard_area');
-        keyboard_area.setAttribute('onselectstart',"return false");
-    
         body.append(wrapper);
+    
+        let header = document.createElement('header');
+        header.classList.add('header');
         wrapper.append(header);
+
+        let page = document.createElement('page');
+        page.classList.add('page');
         wrapper.append(page);
+
+        let footer = document.createElement('footer');
+        footer.classList.add('footer');
         wrapper.append(footer);
+
+        let text_window = document.createElement('form');
+        text_window.classList.add('text_window');
         page.append(text_window);
-        page.append(keyboard_area);
+
+        let text_area = document.createElement('textarea');
+        text_area.classList.add('text_area');
         text_window.append(text_area);
         text_area.autofocus;
         text_area.value = '';
+
+        let keyboard_area = document.createElement('div');
+        keyboard_area.classList.add('keyboard_area');
+        page.append(keyboard_area);
+        keyboard_area.setAttribute('onselectstart',"return false");
+
+        let headerText = document.createElement('h1');
+        headerText.innerHTML = 'Виртуальная клавиатура RSS'
+        header.append(headerText);
+
+        let footerText = document.createElement('h3');
+        footerText.innerHTML = 'Для переключения языка ввода необходимо нажать клавишу (EN/BY) в правом верхнем углу или последовательную комбинацию клавишь "control" + "space (MacOS)".'
+        footer.append(footerText);
+        let footerText2 = document.createElement('h5');
+        footerText2.innerHTML = '©1991artem'
+        footer.append(footerText2);
     }
 
     windowForm();
@@ -54,23 +60,14 @@
 
     
     const KEYBOARD = document.querySelector ('.keyboard_area');
+    const TEXTAREA = document.querySelector ('.text_area');
+    const NAME_ARRAY = ['Backquote','Digit1','Digit2','Digit3','Digit4','Digit5','Digit6','Digit7','Digit8','Digit9','Digit0','Minus','Equal','Backspace','Tab','KeyQ','KeyW','KeyE','KeyR','KeyT','KeyY','KeyU','KeyI','KeyO','KeyP','BracketLeft','BracketRight','lng','CapsLock','KeyA','KeyS','KeyD','KeyF','KeyG','KeyH','KeyJ','KeyK','KeyL','Semicolon','Quote','Backslash','Enter','ShiftLeft','IntlBackslash','KeyZ','KeyX','KeyC','KeyV','KeyB','KeyN','KeyM','Comma','Period','Slash','ArrowUp','ShiftRight','ControlLeft','AltLeft','MetaLeft','Space','MetaRight','AltRight','ArrowLeft','ArrowDown','ArrowRight'];
     const EN_LOW_WORD_ARRAY = ['§','1','2','3','4','5','6','7','8','9','0','-','=','&#5130;','&#8644;','q','w','e','r','t','y','u','i','o','p','[',']',"EN",'&#8682;','a','s','d','f','g','h','j','k','l',';','\'','\\','&#8629;','&#8679;','`','z','x','c','v','b','n','m',',','.','/','&#8593;','&#8679;','control','option','command','MacOS','command','option','&#8592;','&#8595;','&#8594;'];
     const EN_UP_WORD_ARRAY = ['±','!','@','#','$','%','^','&','*','(',')','-','=','&#5130;','&#8644;','Q','W','E','R','T','Y','U','I','O','P','[',']',"EN",'&#8682;','A','S','D','F','G','H','J','K','L',';','\'','\\','&#8629;','&#8679;','`','Z','X','C','V','B','N','M ',',','.','/','&#8593;','&#8679;','control','option','command','MacOS','command','option','&#8592;','&#8595;','&#8594;'];
-    const LG_LOW_WORD_ARRAY = ['§','1','2','3','4','5','6','7','8','9','0','-','=','&#5130;','&#8644;','й','ц','у','к','е','н','г','i','щ','з','х','ъ',"BY",'&#8682;','ф','ы','в','а','п','р','о','л','д','ж','э','\\','&#8629;','&#8679;','`','я','ч','с','м','и','т','ь',',','.','/','&#8593;','&#8679;','control','option','command','MacOS','command','option','&#8592;','&#8595;','&#8594;'];
-    const LG_UP_WORD_ARRAY = ['>','!','"','№','%',':',',','.',';','(',')','-','=','&#5130;','&#8644;','Й','Ц','У','К','Е','Н','Г','I','Щ','З','Х','Ъ',"BY",'&#8682;','Ф','Ы','В','А','П','Р','О','Л','Д','Ж','Э','\\','&#8629;','&#8679;','`','Я','Ч','С','М','И','Т','Ь','Б','Ю','/','&#8593;','&#8679;','control','Alt','Meta','MacOS','Meta','Alt','&#8592;','&#8595;','&#8594;'];
-    const NAME_ARRAY = ['Backquote','Digit1','Digit2','Digit3','Digit4','Digit5','Digit6','Digit7','Digit8','Digit9','Digit0','Minus','Equal','Backspace','Tab','KeyQ','KeyW','KeyE','KeyR','KeyT','KeyY','KeyU','KeyI','KeyO','KeyP','BracketLeft','BracketRight','lng','CapsLock','KeyA','KeyS','KeyD','KeyF','KeyG','KeyH','KeyJ','KeyK','KeyL','Semicolon','Quote','Backslash','Enter','ShiftLeft','IntlBackslash','KeyZ','KeyX','KeyC','KeyV','KeyB','KeyN','KeyM','Comma','Period','Slash','ArrowUp','ShiftRight','ControlLeft','AltLeft','MetaLeft','Space','MetaRight','AltRight','ArrowLeft','ArrowDown','ArrowRight'];
+    const LG_LOW_WORD_ARRAY = ['§','1','2','3','4','5','6','7','8','9','0','-','=','&#5130;','&#8644;','й','ц','у','к','е','н','г','i','ў','з','х','ъ',"BY",'&#8682;','ф','ы','в','а','п','р','о','л','д','ж','э','ё','&#8629;','&#8679;','`','я','ч','с','м','і','т','ь','б','ю','/','&#8593;','&#8679;','control','option','command','MacOS','command','option','&#8592;','&#8595;','&#8594;'];
+    const LG_UP_WORD_ARRAY = ['>','!','"','№','%',':',',','.',';','(',')','-','=','&#5130;','&#8644;','Й','Ц','У','К','Е','Н','Г','I','Ў','З','Х','Ъ',"BY",'&#8682;','Ф','Ы','В','А','П','Р','О','Л','Д','Ж','Э','Ё','&#8629;','&#8679;','`','Я','Ч','С','М','І','Т','Ь','Б','Ю','/','&#8593;','&#8679;','control','option','command','MacOS','command','option','&#8592;','&#8595;','&#8594;'];
 
     keyboard_onload ();
-
-    const KEY_LANG = document.querySelector ('.lng');
-    const TEXTAREA = document.querySelector ('.text_area');
-    const SHIFT_LEFT = document.querySelector ('[name=ShiftLeft]');
-    const SHIFT_RIGHT = document.querySelector ('[name=ShiftRight]');
-    const CAPS_LOCK = document.querySelector ('[name=CapsLock]');
-    const META_RIGHT = document.querySelector ('[name=MetaRight]');
-    const META_LEFT = document.querySelector ('[name=MetaLeft]');
-    const ALT_RIGHT = document.querySelector ('[name=AltRight]');
-    const ALT_LEFT = document.querySelector ('[name=AltLeft]');
     
     function keyboard_onload (){ 
         let keyArray = [];
@@ -106,6 +103,11 @@
                         symbol.innerHTML = keyArray[i];
                     }
     };
+    if (!flag.lower_case){
+        document.querySelector ('[name=CapsLock]').classList.add('long_touch');
+        document.querySelector ('[name=ShiftLeft]').classList.add('long_touch');
+        document.querySelector ('[name=ShiftRight]').classList.add('long_touch');
+    }
 }
 
     function physical_keyboard (){
@@ -167,6 +169,22 @@
                         TEXTAREA.value += '    ';
                         break;
                     }
+                    case  'ArrowUp' : {
+                        TEXTAREA.value += '↑';
+                        break;
+                    }
+                    case  'ArrowLeft' : {
+                        TEXTAREA.value += '←';
+                        break;
+                    }
+                    case  'ArrowDown' : {
+                        TEXTAREA.value += '↓';
+                        break;
+                    }
+                    case  'ArrowRight' : {
+                        TEXTAREA.value += '→';
+                        break;
+                    }
                     case  'ShiftLeft':
                     case  'ShiftRight':
                     case  'CapsLock': {                                       
@@ -188,6 +206,16 @@
                             flag.ctrl = true;
                         }
                         
+                        break;
+                    }
+                    case  'AltLeft':
+                    case  'AltRight': {
+
+                        break;
+                    }
+                    case  'MetaRight':
+                    case  'MetaLeft': {
+
                         break;
                     }
                     case  'lng': {
@@ -228,4 +256,4 @@
     physical_keyboard();
     text_write();
     
-
+}
