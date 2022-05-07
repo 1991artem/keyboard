@@ -130,6 +130,12 @@ div[name="Space"] {
   background-color: #acac9b;
 }
 
+@media screen and (min-width: 1200px) {
+  div[name="Space"] {
+    font-size: 18px;
+  }
+}
+
 div[name="lng"] {
   background-color: #e9e9cf;
 }
@@ -142,6 +148,15 @@ div[name="ArrowRight"] {
   font-size: 1.5vw;
 }
 
+@media screen and (min-width: 1200px) {
+  div[name="ArrowUp"],
+  div[name="ArrowLeft"],
+  div[name="ArrowDown"],
+  div[name="ArrowRight"] {
+    font-size: 18px;
+  }
+}
+
 div[name="Enter"],
 div[name="CapsLock"],
 div[name="ShiftLeft"],
@@ -150,6 +165,16 @@ div[name="Tab"] {
   width: 9%;
   font-size: 2vw;
   background-color: #acac9b;
+}
+
+@media screen and (min-width: 1200px) {
+  div[name="Enter"],
+  div[name="CapsLock"],
+  div[name="ShiftLeft"],
+  div[name="ShiftRight"],
+  div[name="Tab"] {
+    font-size: 24px;
+  }
 }
 
 div[name="MetaRight"],
@@ -161,6 +186,17 @@ div[name="ControlLeft"] {
   width: 8%;
   font-size: 0.9vh;
   background-color: #acac9b;
+}
+
+@media screen and (min-width: 1200px) {
+  div[name="MetaRight"],
+  div[name="MetaLeft"],
+  div[name="AltRight"],
+  div[name="AltLeft"],
+  div[name="Backspace"],
+  div[name="ControlLeft"] {
+    font-size: 16px;
+  }
 }
 
 h1 {
@@ -176,5 +212,12 @@ h5 {
   margin-bottom: 1%;
   margin-right: 1%;
   text-align: end;
+}
+
+img {
+  width: 15%;
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 /*# sourceMappingURL=index.css.map */
