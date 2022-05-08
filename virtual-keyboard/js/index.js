@@ -26,11 +26,8 @@ class Keyboard {
 
     constructor(){  
         try{
-        this.KEY_OF_KEYBOARD = KEY_OF_KEYBOARD;
-        }
-        catch (e){
-            console.log ("Error load /js/key.js" + e);
-        }
+        this.KEY_OF_KEYBOARD = KEY_OF_KEYBOARD;}
+        catch (e){console.log ("Error load /js/key.js" + e);}
         this.flag = {
             lang : JSON.parse(localStorage.getItem("flag.leng")),
             up_case : false,
