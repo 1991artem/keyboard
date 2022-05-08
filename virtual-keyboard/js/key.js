@@ -21,4 +21,4 @@ const KEY_OF_KEYBOARD = {
                                 'control','option','command','MacOS','command','option','←','↓','→']
 
                             };
-export {KEY_OF_KEYBOARD}
+export {KEY_OF_KEYBOARD};
