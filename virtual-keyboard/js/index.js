@@ -170,11 +170,10 @@ text_write (){
                         if (this.flag.ctrl){
                             if (this.flag.lang == true){
                                 this.flag.lang = false;
-                                this.reload_keyboard ();
                             } else {
                                 this.flag.lang = true;
-                                this.reload_keyboard ();
                             }
+                            this.reload_keyboard ();
                             localStorage.setItem("flag.leng",this.flag.lang);
                         } else {
                             this.TEXTAREA.value += " ";
