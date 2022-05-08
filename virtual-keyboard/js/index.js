@@ -57,7 +57,7 @@ class Keyboard {
             shift : false,
         };
         
-        this.flag.lang != undefined ? this.flag.lang == true : this.flag.lang == this.storage.outDate;
+        if (this.flag.lang != undefined){ this.flag.lang == true };
 
         this.KEYBOARD = null;
         this.TEXTAREA = null;
