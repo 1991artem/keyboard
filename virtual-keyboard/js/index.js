@@ -59,7 +59,7 @@ class Keyboard {
             shift : false,
         };
         
-        if (this.flag.lang != undefined){ this.flag.lang == true };
+        if (this.flag.lang != undefined){ this.flag.lang == true }
 
         this.KEYBOARD = null;
         this.TEXTAREA = null;
@@ -142,7 +142,7 @@ windowForm (){
             let symbol = document.createElement('p');
             new Key(div,'word', this.NAME_ARRAY[i], keyArray[i], symbol).init();
             this.KEYBOARD.append(div);
-    };
+    }
 
     let country = document.createElement('img');
     let space = document.querySelector ('[name=Space]')
@@ -281,7 +281,7 @@ text_write (){
                         }
                         
                     break;
-                    };
+                    }
                     }
         });
 
