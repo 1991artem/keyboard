@@ -109,7 +109,7 @@ windowForm (){
             header.append(headerText);
 
         let footerText = document.createElement('h3');
-            footerText.innerHTML = 'Для переключения языка ввода необходимо нажать клавишу (EN/BY) в правом верхнем углу или последовательную комбинацию клавишь "control" + "space (MacOS)".'
+            footerText.innerHTML = 'Для переключения языка ввода необходимо нажать клавишу (EN/BY) в правом верхнем углу или последовательную комбинацию клавиш "control" + "space (MacOS)".'
             footer.append(footerText);
         let footerText2 = document.createElement('h5');
             footerText2.innerHTML = '©1991artem'
