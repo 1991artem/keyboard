@@ -23,3 +23,4 @@ const KEY_OF_KEYBOARD = {
                     };
                     
 export {KEY_OF_KEYBOARD};
+//import {KEY_OF_KEYBOARD} from '/js/key.js';
