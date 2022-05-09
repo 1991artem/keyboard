@@ -1,0 +1,156 @@
+*{
+    font-family: Arial;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+
+}
+.wrapper{
+    min-width: 700px;
+    min-height: 800px;
+    max-height: 1800px;
+    height:  100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+}
+.header{
+    width: 100%;
+    height:  15%;
+    display: flex;
+    background-color: rgb(231, 235, 228);
+}
+.page{
+    width: 100%;
+    height:  70%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(231, 235, 228);
+}
+.footer{
+    width: 100%;
+    height:  15%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(231, 235, 228);
+}
+.keyboard_area{
+    width: 100%;
+    height:  50%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    pointer-events: none;
+    justify-content: center;
+    background-color: rgb(167, 168, 164);
+}
+.text_window{
+    width: 100%;
+    height:  50%;
+    display: flex;
+    background-color: rgb(243, 245, 239);
+}
+.text_area{
+    width: 100%;
+    font-size: 250%;
+}
+.word{
+    width: 6.22%;
+    height: 13%;
+    margin: 0.2%;
+    font-size: 20px;
+    font-family: Georgia;
+    display: flex;
+    border: solid 1px;
+    border-radius: 10px;
+    pointer-events: all;
+    background-color: rgb(198, 198, 194);
+    cursor: pointer;
+}
+.symbol{
+    margin: auto;
+    pointer-events: none;
+    color: rgb(243, 245, 247);
+}
+.touch{
+    background-color: rgb(214, 208, 213);
+    border-color: rgb(240, 83, 83);
+}
+.long_touch{
+    border-color: rgb(240, 83, 83);
+}
+div[name="Space"]{
+    width: 31%;
+    font-size: 1.5vw;
+    @media screen and (min-width: 1200px) {
+        font-size: 18px;
+    }
+    background-color: rgb(172, 172, 155);;
+}
+div[name="lng"]{
+    background-color: rgb(233, 233, 207);;
+}
+div[name="ArrowUp"],
+div[name="ArrowLeft"],
+div[name="ArrowDown"],
+div[name="ArrowRight"]
+{
+    background-color: rgb(172, 172, 155);
+    font-size: 1.5vw;
+    @media screen and (min-width: 1200px) {
+        font-size: 18px;
+    }
+}
+div[name="Enter"],
+div[name="CapsLock"],
+div[name="ShiftLeft"],
+div[name="ShiftRight"],
+div[name="Tab"]
+{
+    width: 9%;
+    font-size: 2vw;
+    @media screen and (min-width: 1200px) {
+        font-size: 24px;
+    }
+    background-color: rgb(172, 172, 155);
+}
+div[name="MetaRight"],
+div[name="MetaLeft"],
+div[name="AltRight"],
+div[name="AltLeft"],
+div[name="Backspace"],
+div[name="ControlLeft"]
+{
+    width: 8%;
+    font-size: 0.9vh;
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+    }
+    background-color: rgb(172, 172, 155);
+}
+h1{
+    margin: auto;
+}
+h3{
+    margin: auto;
+    text-align: center;
+}
+h5{
+    margin-bottom: 1%;
+    margin-right: 1%;
+    text-align: end;
+}
+img{
+    width: 15%;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
