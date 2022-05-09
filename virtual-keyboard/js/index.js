@@ -1,4 +1,4 @@
-import {KEY_OF_KEYBOARD} from './js/key.js'
+import {KEY_OF_KEYBOARD} from '/js/key.js';
 
 class Key {
     constructor(element, elClass, elName, value, children){
@@ -124,9 +124,9 @@ windowForm (){
     let space = document.querySelector ('[name=Space]')
     space.append(country);
     if (this.flag.lang){
-        country.src = '/icon/EN.png';
+        country.src = 'icon/EN.png';
     } else{
-        country.src = '/icon/BY.jpeg';
+        country.src = 'icon/BY.jpeg';
     }
 
     if (this.flag.up_case){
